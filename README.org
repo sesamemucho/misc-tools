@@ -1,0 +1,39 @@
+* misc-tools: Miscellaneous single-file scripts
+
+Small scripts that are probably useful only to me.
+
+** get_next_filename
+
+Very old-school version control. If you have a filename like
+'foo-03.bar', the result is 'foo-04.bar'.
+
+** scan_letter_1side
+
+Use scanimage to scan a single-sided letter size original and convert
+to pdf.
+
+** scan_thin_receipt
+
+Use scanimage to scan a single-sided thin, long receipt original and
+convert to pdf.
+
+** link-dirs
+
+Handles directories similarly to how yadm handles files, in that it
+automatically links alternative directories to a basename, but it does
+not then use git.
+
+** yadm-post-alt
+
+post_alt hook for yadm. It does two things:
+
+  - Finds all link files created by yadm alternative files, and
+    creates a file to ignore all the links when running unison.
+
+  - Finds all alternative directories (named in the yadm style) and
+    creates yadm-style links, so (say) config or cache directories for
+    different machines can co-exist in the same tree.
+
+** Makefile
+
+Installs the script files as appropriate.
