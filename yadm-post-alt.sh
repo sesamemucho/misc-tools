@@ -15,6 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+declare -a dirlist
+declare -a filelist
+
 for i in $(find . -name \*##\* -prune)
 do
     if [[ -d $i ]]
@@ -38,7 +41,9 @@ unison_file=$(mktemp)
 
 echo "# unison ignore list for yadm link targets" > "${unison_file}"
 echo "# Automatically created on "$(date) >> "${unison_file}"
-for j in ${flist[@]}+${dlist[@]}
+
+newlist=("${flist[@]}" "${dlist[@]}")
+for j in ${newlist[@]}
 do
     echo "ignore = Path "$j
 done | sort -u >> "${unison_file}"

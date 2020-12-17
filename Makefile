@@ -24,6 +24,7 @@ $(TOP)/%: %.py
 	install $< $@
 
 $(HOME)/.config/yadm/hooks/post_alt: yadm-post-alt.sh
+	mkdir -p $(@D)
 	install $< $@
 
 show:
