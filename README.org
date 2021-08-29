@@ -2,6 +2,12 @@
 
 Small scripts that are probably useful only to me.
 
+** get_eth_info
+
+If you connect two ethernet-to-usb dongles to a computer, it can be
+annoying to determine which dongle goes to which ethernet device. This
+script shows that information.
+
 ** get_next_filename
 
 Very old-school version control. If you have a filename like

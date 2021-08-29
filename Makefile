@@ -1,6 +1,7 @@
 TOP	:= $(HOME)/bin
 
 SRCS	:= \
+	get_eth_info.sh \
 	get_next_filename.pl \
 	link-dirs.sh \
 	scan_letter_1side.sh \
